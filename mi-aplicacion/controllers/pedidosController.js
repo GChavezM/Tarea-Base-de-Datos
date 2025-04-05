@@ -50,7 +50,7 @@ exports.eliminarPedido = async (req, res) => {
         if (!pedidoEliminado) {
             return res.status(404).json({ message: 'Pedido no encontrado' });
         }
-        res.status(204).send();
+        res.json({ message: 'Pedido eliminado' });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }

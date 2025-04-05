@@ -49,7 +49,7 @@ exports.eliminarCliente = async (req, res) => {
             return res.status(404).json({ message: 'Cliente no encontrado' });
         }
         await cliente.destroy();
-        res.status(204).send();
+        res.json({ message: 'Cliente eliminado' });
     } catch (error) {
         res.status(500).json({ message: 'Error al eliminar el cliente' });
     }
